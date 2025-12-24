@@ -6,3 +6,12 @@ list.addEventListener('click', (e) => {
         e.target.classList.toggle('completed');
     }
 });
+
+input.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter' && input.value !== '') {
+        const li = document.createElement('li');
+        li.textContent = input.value;
+        list.appendChild(li);
+        input.value = '';
+    }
+});
