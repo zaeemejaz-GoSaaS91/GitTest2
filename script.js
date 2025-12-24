@@ -15,3 +15,10 @@ input.addEventListener('keypress', (e) => {
         input.value = '';
     }
 });
+
+
+list.addEventListener('dblclick', (e) => {
+    if (e.target.tagName === 'LI') {
+        e.target.remove();
+    }
+});
