@@ -21,6 +21,16 @@ document.getElementById('clearBtn').addEventListener('click', () => {
 });
 
 
+const searchBar = document.getElementById('searchBar');
+searchBar.addEventListener('keyup', (e) => {
+    const term = e.target.value.toLowerCase();
+    const tasks = list.getElementsByTagName('li');
+    Array.from(tasks).forEach((task) => {
+        const text = task.textContent.toLowerCase();
+        task.style.display = text.indexOf(term) != -1 ? '' : 'none';
+    });
+});
+
 
 list.addEventListener('dblclick', (e) => {
     if (e.target.tagName === 'LI') {
