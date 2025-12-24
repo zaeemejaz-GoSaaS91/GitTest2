@@ -16,6 +16,11 @@ input.addEventListener('keypress', (e) => {
     }
 });
 
+document.getElementById('clearBtn').addEventListener('click', () => {
+    list.innerHTML = '';
+});
+
+
 
 list.addEventListener('dblclick', (e) => {
     if (e.target.tagName === 'LI') {
